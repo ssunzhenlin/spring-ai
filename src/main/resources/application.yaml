@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: mcp
+  application:
+    name: springai
+  elasticsearch:
+    uris: http://localhost:9200
+  ai:
+    openai:
+      base-url: https://api.deepseek.com  # deepseek api??
+      api-key: sk-14cf7753d6034f058bbf615508aadaae
+      chat:
+        options:
+          model: deepseek-chat # ?????deepseek-chat ???? DeepSeek-V3?deepseek-reasoner ???? DeepSeek-R1
