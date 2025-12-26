@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: mcp
+    active: agent
   application:
     name: springai
   elasticsearch:
