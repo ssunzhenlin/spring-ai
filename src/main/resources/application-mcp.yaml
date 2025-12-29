@@ -30,4 +30,4 @@ spring:
         sse:
           connections:
             server1:
-                url: http://localhost:8081
+                url: http://localhost:8083
