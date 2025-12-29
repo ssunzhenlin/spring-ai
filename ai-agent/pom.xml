@@ -7,9 +7,9 @@
         <artifactId>spring-ai</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>mcp-server</artifactId>
-    <name>mcp-server</name>
-    <description>mcp-server</description>
+    <artifactId>ai-agent</artifactId>
+    <name>ai-agent</name>
+    <description>ai-agent</description>
     <url/>
     <licenses>
         <license/>
@@ -30,13 +30,31 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
+            <artifactId>spring-ai-starter-model-openai</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-advisors-vector-store</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-vector-store-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-tika-document-reader</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-client</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -59,5 +77,31 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>agent</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>agent</spring.profiles.active>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>mcp</id>
+            <properties>
+                <spring.profiles.active>mcp</spring.profiles.active>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>reg</id>
+            <properties>
+                <spring.profiles.active>reg</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

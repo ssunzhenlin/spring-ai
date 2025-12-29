@@ -1,12 +1,10 @@
-package com.zhenlin.springai.service;
+package com.zhenlin.aiagent.service;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.stereotype.Service;
-
-import java.util.spi.ToolProvider;
 
 @Service
 public class GetWeatherService {

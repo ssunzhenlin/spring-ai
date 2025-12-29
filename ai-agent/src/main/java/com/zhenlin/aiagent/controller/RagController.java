@@ -1,8 +1,8 @@
-package com.zhenlin.springai.controller;
+package com.zhenlin.aiagent.controller;
 
-import com.zhenlin.springai.service.DataLoaderService;
-import com.zhenlin.springai.service.GenerationService;
-import com.zhenlin.springai.service.RetrievalService;
+import com.zhenlin.aiagent.service.DataLoaderService;
+import com.zhenlin.aiagent.service.GenerationService;
+import com.zhenlin.aiagent.service.RetrievalService;
 import jakarta.annotation.Resource;
 import org.springframework.ai.document.Document;
 import org.springframework.web.bind.annotation.GetMapping;

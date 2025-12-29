@@ -1,4 +1,4 @@
-package com.zhenlin.springai.service;
+package com.zhenlin.aiagent.service;
 
 import jakarta.annotation.Resource;
 import org.springframework.ai.document.Document;

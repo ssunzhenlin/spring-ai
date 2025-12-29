@@ -1,4 +1,4 @@
-package com.zhenlin.springai.controller;
+package com.zhenlin.aiagent.controller;
 
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.model.ChatResponse;

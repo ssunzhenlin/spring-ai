@@ -1,8 +1,9 @@
+
 spring:
   profiles:
     active: @spring.profiles.active@
   application:
-    name: springai
+    aiagent
   elasticsearch:
     uris: http://localhost:9200
   ai:
